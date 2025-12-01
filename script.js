@@ -18,14 +18,12 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 100km, 70 anni => prezzo corretto: €12.60
 
 */
-const userAge = prompt("What's your age?");
-const km = prompt("How many km are you going to travel?");
+const userAge = parseInt(prompt("What's your age?"));
+const km = parseInt(prompt("How many km are you going to travel?"));
 
 const priceperkm = 0.21;
 
 let ticketPrice = km * priceperkm;
-
-
 
 console.log(userAge);
 
@@ -33,16 +31,12 @@ if (userAge < 18) {
     console.log("utente è minorenne - 20% sconto");
     ticketPrice = ticketPrice * 0.8;
 
-
 } else if (userAge >= 65) {
     console.log("utente è senior - 40% sconto");
     ticketPrice = ticketPrice * 0.6;
-    
-} else {
-    console.log("utente è maggiorenne ma non senior");
+
 }
 
 
-
-
+console.log("Total price: € " + ticketPrice.toFixed(2));
 
